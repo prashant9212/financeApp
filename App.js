@@ -1,12 +1,17 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import Login from './component/Login';
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, useNavigation } from "@react-navigation/native";
+import Login from './component/Login';
+import Dashboard from './component/Dashboard';
+import Register from './component/Register';
+import Profile from './component/Profile';
+import Home from './component/Home';
+import Offers from './component/Offers';
 
 const Stack = createNativeStackNavigator();
 
-export default function App() {
+const App = () => {
 
   return (
     <>
@@ -21,6 +26,31 @@ export default function App() {
             component={Login}
             options={{ title: "Login" }}
           />
+          <Stack.Screen
+            name="Dashboard"
+            component={Dashboard}
+            options={{ title: "Dashboard" }}
+          />
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{ title: "Register" }}
+          />
+          <Stack.Screen
+            name="Profile"
+            component={Profile}
+            options={{ title: "Profile" }}
+          />
+           <Stack.Screen
+            name="Home"
+            component={Home}
+            options={{ title: "Home" }}
+          />
+          <Stack.Screen
+            name="Offers"
+            component={Offers}
+            options={{ title: "Offers" }}
+          />
 
         </Stack.Navigator>
       </NavigationContainer>
@@ -28,11 +58,4 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;
