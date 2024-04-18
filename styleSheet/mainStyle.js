@@ -5,6 +5,28 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
+    containerHome: {
+        backgroundColor: '#ffeded',
+        height: '100%'
+    },
+    DashboardHeader: {
+        elevation: 5,
+        shadowColor: '#000',
+        backgroundColor: '#fff',
+        paddingTop: 40,
+        borderBottomEndRadius: 20,
+        borderBottomStartRadius: 20
+    },
+    RecentlyCardBox: {
+        elevation: 1,
+        shadowColor: '#000',
+        backgroundColor: '#fff',
+        width:'97%',
+        borderRadius:10,
+        padding:3,
+        margin:'1.5%',
+        margin:'1%'
+    },
     LoginTop: {
         backgroundColor: "#E53935",
         height: 200,
@@ -66,11 +88,45 @@ const styles = StyleSheet.create({
         fontSize: 16
     },
     DashCardList: {
-        width: 51,
-        height: 51,
+        width: 55,
+        height: 55,
         backgroundColor: '#F5F5F5',
-        borderColor:'#E0E0E0',
-        borderWidth:1,
+        borderColor: '#d92622',
+        borderWidth: 1,
+        margin: 12,
+        textAlign: 'center',
+        textAlignVertical: "center",
+        padding: 10,
+        borderRadius: 50,
+        color: '#fff',
+        fontSize: 16
+    },
+    servicesCard: {
+        width: '96%',
+        marginStart: '2%',
+        elevation: 1,
+        shadowColor: '#000',
+        margin: '2%',
+        marginTop: '0%',
+        borderRadius: 15,
+        paddingBottom: 20,
+        backgroundColor: '#fff',
+        padding: 5,
+        borderColor: '#E0E0E0',
+        borderWidth: 1
+    },
+    RecentlyCard: {
+        width: '100%',
+        marginTop: '-2%',
+        paddingBottom: 20,
+        padding: 5,
+    },
+    ServicesList: {
+        width: 68,
+        height: 68,
+        backgroundColor: '#f9f9f9',
+        borderColor: '#f1f1f1',
+        borderWidth: 1,
         margin: 10,
         textAlign: 'center',
         textAlignVertical: "center",
@@ -79,6 +135,7 @@ const styles = StyleSheet.create({
         color: '#fff',
         fontSize: 16
     },
+
 });
 
 
