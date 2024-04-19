@@ -4,6 +4,7 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import Dashboard from './Dashboard';
 import Profile from './Profile';
 import Offers from './Offers';
+import BarCode from './BarCode';
 
 
 const Tab = createMaterialBottomTabNavigator();
@@ -13,7 +14,7 @@ const Home = ({ navigation }) => {
     return (
           <Tab.Navigator
             initialRouteName="Dashboard"
-            activeColor="#E53935"
+            activeColor="#691A99"
             barStyle={{ backgroundColor: '#fff', height: 68, borderColor:'#eee', borderWidth:1,}}
         >
             <Tab.Screen
@@ -26,6 +27,16 @@ const Home = ({ navigation }) => {
                     ),
                 }}
             />
+             <Tab.Screen
+                name="BarCode"
+                component={BarCode}
+                options={{
+                    tabBarLabel: 'Scan & Pay',
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="barcode-scan" color={color} size={22} />
+                    ),
+                }}
+            />
             <Tab.Screen
                 name="Offers"
                 component={Offers}
@@ -35,7 +46,7 @@ const Home = ({ navigation }) => {
                         <MaterialCommunityIcons name="wallet-giftcard" color={color} size={22} />
                     ),
                 }}
-            />
+            />           
             <Tab.Screen
                 name="Profile"
                 component={Profile}

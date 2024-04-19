@@ -36,7 +36,7 @@ const Register = ({ navigation }) => {
                     onPress={() => {
                         navigation.navigate("Login");
                     }}>
-                    <Text style={{ padding: 5, color: '#E53935', fontSize: 15 }}>Login</Text>
+                    <Text style={{ padding: 5, color: '#691A99', fontSize: 15 }}>Login</Text>
                 </TouchableOpacity>
             </View>
         </View>

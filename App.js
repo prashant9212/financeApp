@@ -8,6 +8,8 @@ import Register from './component/Register';
 import Profile from './component/Profile';
 import Home from './component/Home';
 import Offers from './component/Offers';
+import BarCode from './component/BarCode';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -50,6 +52,11 @@ const App = () => {
             name="Offers"
             component={Offers}
             options={{ title: "Offers" }}
+          />
+          <Stack.Screen
+            name="BarCode"
+            component={BarCode}
+            options={{ title: "BarCode" }}
           />
 
         </Stack.Navigator>
