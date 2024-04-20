@@ -1,10 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
+import LocationApp from './Location'
 
 const Offers = () => {
   return (
     <View>
-      <Text>Offers</Text>
+      <Text>Name</Text>
     </View>
   )
 }

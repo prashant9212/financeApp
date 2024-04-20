@@ -67,43 +67,45 @@ const Dashboard = ({ navigation }) => {
                 </View>
             </View>
             <ScrollView style={styles.scrollView}>
-                <View style={{ width: '96%', marginStart: '2%', margin: '3%', elevation: 1, shadowColor: '#000', borderRadius: 20, paddingBottom: 20, backgroundColor: '#691A99', padding: 5, borderColor: '#E0E0E0', borderWidth: 1 }}>
-                    <View style={{ flexDirection: 'row', }}>
-                        <Text style={{ padding: 7, }}>
-                            <MaterialCommunityIcons name="wallet" size={26} color={'#fff'} />
+                <View style={{ width: '96%', marginStart: '2%', marginTop: '2%', elevation: 1, shadowColor: '#000', borderRadius: 20, paddingBottom: 0, backgroundColor: '#691A99', padding: 0, borderColor: '#E0E0E0', borderWidth: 1 }}>
+                    <View style={{ backgroundColor: '#520481', borderTopEndRadius: 500, borderBottomEndRadius: 500, borderTopStartRadius: 100, borderBottomStartRadius:100, paddingBottom:15, }}>
+                        <View style={{ flexDirection: 'row', }}>
+                            <Text style={{ padding: 7, }}>
+                                <MaterialCommunityIcons name="wallet" size={26} color={'#fff'} />
+                            </Text>
+                            <Text style={{ flex: 10, fontSize: 14, marginTop: 11, color: '#fff' }}>
+                                Your Wallet Balance
+                            </Text>
+                        </View>
+                        <Text style={{ paddingLeft: 10, padding: 2, fontSize: 25, marginTop: 4, marginBottom: 4, color: '#fff', }}>
+                            ₹ 25,48,212.00
                         </Text>
-                        <Text style={{ flex: 10, fontSize: 14, marginTop: 11, color: '#fff' }}>
-                            Your Wallet Balance
-                        </Text>
-                    </View>
-                    <Text style={{ paddingLeft: 10, padding: 2, fontSize: 25, marginTop: 5, marginBottom: 8, color: '#fff', }}>
-                        ₹ 25,48,212.00
-                    </Text>
-                    <View style={{ flexDirection: 'row', }}>
-                        <ScrollView horizontal={true}
-                            showsHorizontalScrollIndicator={false}
-                            endFillColor="#000"
-                            overScrollMode="never">
-                            {CardData.map((data, number) => {
-                                return (
-                                    <View key={number.toString()}>
-                                        <TouchableOpacity style={{ flexDirection: 'row', }}
-                                            onPress={() => {
-                                                navigation.navigate("{data.page}");
-                                            }}>
-                                            <Text style={styles.DashCardList}>
-                                                <MaterialCommunityIcons name={data.icon} size={24} color={'#691A99'} />
-                                            </Text>
-                                        </TouchableOpacity>
-                                        <Text style={{ textAlign: 'center', fontSize: 12, color: '#fff' }}>{data.name}</Text>
-                                    </View>
-                                )
-                            })}
-                        </ScrollView>
+                        <View style={{ flexDirection: 'row', }}>
+                            <ScrollView horizontal={true}
+                                showsHorizontalScrollIndicator={false}
+                                endFillColor="#000"
+                                overScrollMode="never">
+                                {CardData.map((data, number) => {
+                                    return (
+                                        <View key={number.toString()}>
+                                            <TouchableOpacity style={{ flexDirection: 'row', }}
+                                                onPress={() => {
+                                                    navigation.navigate("{data.page}");
+                                                }}>
+                                                <Text style={styles.DashCardList}>
+                                                    <MaterialCommunityIcons name={data.icon} size={24} color={'#691A99'} />
+                                                </Text>
+                                            </TouchableOpacity>
+                                            <Text style={{ textAlign: 'center', fontSize: 12, color: '#fff' }}>{data.name}</Text>
+                                        </View>
+                                    )
+                                })}
+                            </ScrollView>
+                        </View>
                     </View>
                 </View>
 
-                <SliderMain1/>
+                <SliderMain1 />
 
                 {/* Other Services */}
 

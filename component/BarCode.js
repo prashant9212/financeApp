@@ -23,8 +23,9 @@ const BarCode = ({ navigation }) => {
   const handleBarCodeScanned = ({ type, data }) => {
     setScanned(true);
     alert(`Bar code with type ${type} and data ${data} has been scanned!`);
-    console.log(data);
+    console.log(data);    
   };
+
 
   if (hasPermission === null) {
     return <Text>Requesting for camera permission</Text>;

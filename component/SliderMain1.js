@@ -1,10 +1,10 @@
 import React from 'react';
 import {
-StyleSheet,
-View,
-Text,
-Dimensions,
-Image
+  StyleSheet,
+  View,
+  Text,
+  Dimensions,
+  Image
 } from 'react-native';
 import ViewSlider from 'react-native-view-slider'
 
@@ -14,44 +14,48 @@ function SliderMain1() {
   return (
     <>
       <ViewSlider 
-        renderSlides = {
+        renderSlides={
           <>
             <View style={styles.viewBox}>
-              <Image source={{uri: 'https://images.aapkabazar.co/slider/ChanaDalPre1.webp'}} style={{height: 200, width}}/>
+              <Image source={require("../assets/banner1.jpg")} style={styles.BannerImg} />
             </View>
             <View style={styles.viewBox}>
-              <Image source={{uri: 'https://images.aapkabazar.co/banners/top_banner/app/kismis.webp'}} style={{height: 200, width}}/>
+              <Image source={require("../assets/banner2.jpg")} style={styles.BannerImg} />
             </View>
-         </>
-      }
-      style={styles.slider}
-      //height = {200}
-      slideCount = {2}
-      dots = {true} 
-      dotActiveColor = 'red'
-      dotInactiveColor = 'gray'
-      dotsContainerStyle={styles.dotContainer}  
-      autoSlide = {true} 
-      slideInterval = {5000} 
-     />
+          </>
+        }
+        style={styles.slider}
+        //height = {200}
+        slideCount={2}
+        dots={false}
+        dotActiveColor='red'
+        dotInactiveColor='gray'
+        dotsContainerStyle={styles.dotContainer}
+        autoSlide={true}
+        slideInterval={5000}
+      />
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  BannerImg:{
+    height: 80, 
+    width :width,
+    borderRadius:0,
+  },
   viewBox: {
-      paddingHorizontal: 20,
-      justifyContent: 'center',
-      width: width,
-      padding: 10,
-      alignItems: 'center',
-      height: 150
+    paddingHorizontal: 20,
+    justifyContent: 'center',
+    width: width,
+    alignItems: 'center',
+    height: 80,
   },
   slider: {
-      alignSelf: 'center',
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: 'pink'
+    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding:10,
   },
   dotContainer: {
     backgroundColor: 'transparent',

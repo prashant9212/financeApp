@@ -9,6 +9,9 @@ import Profile from './component/Profile';
 import Home from './component/Home';
 import Offers from './component/Offers';
 import BarCode from './component/BarCode';
+import LocationApp from './component/Location';
+
+
 
 
 const Stack = createNativeStackNavigator();
@@ -20,9 +23,15 @@ const App = () => {
       <StatusBar style='light' />
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="Login"
+          initialRouteName="LocationApp"
           screenOptions={{ headerShown: false }}
         >
+          <Stack.Screen
+            name="Location"
+            component={LocationApp}
+            options={{ title: "Location" }}
+          />
+         
           <Stack.Screen
             name="Login"
             component={Login}
@@ -58,6 +67,7 @@ const App = () => {
             component={BarCode}
             options={{ title: "BarCode" }}
           />
+          
 
         </Stack.Navigator>
       </NavigationContainer>
