@@ -5,6 +5,8 @@ import styles from '../styleSheet/mainStyle'
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { CardData, ServicesData, RecentlyCardData } from './DataApi/Data';
 import { StatusBar } from 'expo-status-bar';
+import SliderMain from './SliderMain';
+import SliderMain1 from './SliderMain1';
 
 
 const Dashboard = ({ navigation }) => {
@@ -100,6 +102,8 @@ const Dashboard = ({ navigation }) => {
                         </ScrollView>
                     </View>
                 </View>
+
+                <SliderMain1/>
 
                 {/* Other Services */}
 
