@@ -53,23 +53,28 @@ const Dashboard = ({ navigation }) => {
             <View style={styles.DashboardHeader}>
                 <View style={{ flexDirection: 'row', alignContent: 'center', alignContent: 'center' }}>
                     <View style={{ flex: 1, padding: 2, width: 80, height: 40, margin: 12, textAlign: 'center', borderRadius: 50 }}>
-                        <Image style={{ resizeMode: "cover", width: 40, height: 40, borderRadius: 50, }}
-                            source={require("../assets/user.jpg")}
-                        ></Image>
+                        <TouchableOpacity o onPress={() => {
+                            navigation.navigate("Profile");
+                        }}
+                        >
+                            <Image style={{ resizeMode: "cover", width: 40, height: 40, borderRadius: 50, }}
+                                source={require("../assets/user.jpg")}
+                            ></Image>
+                        </TouchableOpacity>
                     </View>
                     <Text style={{ flex: 10, fontSize: 13, marginTop: 14, paddingLeft: 10, color: '#000' }}>
                         Hello, Prashant, {"\n"}
                         <Text style={{ fontSize: 17, }}>Welcome Back!</Text>
                     </Text>
                     <Text onPress={() => setIsVisible('!isVisible')}
-                        style={{ flex: 1, padding: 7, width: 40, height: 40, margin: 12, borderRadius: 50 }}>
-                        <MaterialCommunityIcons name="bell" size={24} color={'#691A99'} />
+                        style={{ flex: 1, padding: 7, width: 40, height: 40, margin: 12, borderRadius: 50,}}>
+                        <MaterialCommunityIcons name="bell" size={24} color={'#555'} />
                     </Text>
                 </View>
             </View>
             <ScrollView style={styles.scrollView}>
                 <View style={{ width: '96%', marginStart: '2%', marginTop: '2%', elevation: 1, shadowColor: '#000', borderRadius: 20, paddingBottom: 0, backgroundColor: '#691A99', padding: 0, borderColor: '#E0E0E0', borderWidth: 1 }}>
-                    <View style={{ backgroundColor: '#520481', borderTopEndRadius: 500, borderBottomEndRadius: 500, borderTopStartRadius: 100, borderBottomStartRadius:100, paddingBottom:15, }}>
+                    <View style={{ backgroundColor: '#520481', borderTopEndRadius: 500, borderBottomEndRadius: 500, borderTopStartRadius: 100, borderBottomStartRadius: 100, paddingBottom: 15, }}>
                         <View style={{ flexDirection: 'row', }}>
                             <Text style={{ padding: 7, }}>
                                 <MaterialCommunityIcons name="wallet" size={26} color={'#fff'} />
@@ -118,7 +123,7 @@ const Dashboard = ({ navigation }) => {
                     <View style={{ flexDirection: 'row', flexWrap: 'wrap', }}>
                         {ServicesData.map((data, number) => {
                             return (
-                                <View key={number.toString()}>
+                                <View key={number.toString()} style={{ marginRight: '3%' }}>
                                     <TouchableOpacity style={{ flexDirection: 'row', }}
                                         onPress={() => {
                                             navigation.navigate("{data.page}");
@@ -127,7 +132,7 @@ const Dashboard = ({ navigation }) => {
                                             <MaterialCommunityIcons name={data.icon} size={28} color={'#691A99'} />
                                         </Text>
                                     </TouchableOpacity>
-                                    <Text style={{ textAlign: 'center', fontSize: 12 }}>{data.name}</Text>
+                                    <Text style={{ textAlign: 'center', fontSize: 11, }}>{data.name}</Text>
                                 </View>
                             )
                         })}
@@ -144,7 +149,7 @@ const Dashboard = ({ navigation }) => {
                         </Text>
                         <TouchableOpacity style={{ flexDirection: 'row-reverse', padding: 15, }}
                             onPress={() => {
-                                navigation.navigate('Cart', {screen:'Cart1'});
+                                navigation.navigate('Other', { screen: 'Tranctions' });
                             }}>
                             <Text style={{ color: '#691A99' }}>See All</Text>
                         </TouchableOpacity>
@@ -159,13 +164,13 @@ const Dashboard = ({ navigation }) => {
                                             <MaterialCommunityIcons name={User.icon} size={24} color={'#fff'} />
                                         </Text>
                                         <View style={{ flex: 6, marginTop: 10, color: '#000' }}>
-                                            <Text style={{ fontSize: 17, }}>{User.name}</Text>
-                                            <Text style={{ fontSize: 13, paddingTop: 2, color: '#777' }}>{User.activity}</Text>
+                                            <Text style={{ fontSize: 16, }}>{User.name}</Text>
+                                            <Text style={{ fontSize: 12, paddingTop: 4, color: '#777' }}>{User.activity}</Text>
                                         </View>
                                         <View style={{ flex: 5, flexDirection: 'row-reverse' }}>
                                             <View>
                                                 <Text style={{ fontSize: 17, marginTop: 13, color: '#691A99', textAlign: 'right' }}> ₹{User.amount}</Text>
-                                                <Text style={{ fontSize: 13, color: '#777', paddingTop: 2, }}>{User.date}</Text>
+                                                <Text style={{ fontSize: 12, color: '#777', paddingTop: 4, }}>{User.date}</Text>
                                             </View>
                                         </View>
                                     </View>

@@ -1,12 +1,11 @@
 import React from "react";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import Cart1 from "./CartScreen/Cart1";
-import Cart2 from "./CartScreen/Cart2";
-import Cart3 from "./CartScreen/Cart3";
+import Transactions from "./OtherScreen/Transactions";
+import Orders from "./OtherScreen/Orders";
 
 const Tab = createMaterialTopTabNavigator();
 
-const Cart = ({ navigation }) => {
+const Other = ({ navigation }) => {
   return (
     <Tab.Navigator
       initialRouteName="Cart1"
@@ -27,22 +26,22 @@ const Cart = ({ navigation }) => {
       }}
     >
       <Tab.Screen
-        name="Cart1"
-        component={Cart1}
+        name="Transactions"
+        component={Transactions}
         options={{ tabBarLabel: "all Tranctions" }}
       />
       <Tab.Screen
-        name="Cart2"
-        component={Cart2}
-        options={{ tabBarLabel: "Electronic" }}
+        name="Orders"
+        component={Orders}
+        options={{ tabBarLabel: "All Orders" }}
       />
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Cart3"
         component={Cart3}
         options={{ tabBarLabel: "Fashion" }}
-      />
+      /> */}
     </Tab.Navigator>
   );
 };
 
-export default Cart;
+export default Other;

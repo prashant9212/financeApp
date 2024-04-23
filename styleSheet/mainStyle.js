@@ -111,8 +111,8 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   DashCardList: {
-    width: 55,
-    height: 55,
+    width: 45,
+    height: 45,
     backgroundColor: "#F5F5F5",
     margin: 10,
     textAlign: "center",
@@ -143,18 +143,18 @@ const styles = StyleSheet.create({
     padding: 5,
   },
   ServicesList: {
-    width: 68,
-    height: 68,
+    width: 52,
+    height: 52,
     backgroundColor: "#f9f9f9",
     borderColor: "#f1f1f1",
     borderWidth: 1,
-    margin: 10,
+    margin: 15,
+    marginRight:'4%',
     textAlign: "center",
     textAlignVertical: "center",
     padding: 10,
     borderRadius: 50,
     color: "#fff",
-    fontSize: 16,
   },
   containerBarcode: {
     flex: 1,
@@ -178,9 +178,10 @@ const styles = StyleSheet.create({
     height: 50,
     marginTop:32,
     padding:12,
+    textAlign:'center'
   },
   ProfileHeadText:{
-    fontSize:18,
+    fontSize:20,
     alignSelf:'center'
   },
 });

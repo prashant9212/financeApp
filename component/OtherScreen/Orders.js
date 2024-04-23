@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 
 
-const Cart2 = () => {
+const Orders = () => {
   return (
     <View>
       <Text>Electronic</Text>
@@ -10,5 +10,5 @@ const Cart2 = () => {
   )
 }
 
-export default Cart2
+export default Orders
 

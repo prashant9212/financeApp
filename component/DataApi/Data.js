@@ -32,8 +32,8 @@ export const CardData = [
     {
         id: "6",
         page: "Other",
-        icon: "share",
-        name: "Other"
+        icon: "widgets-outline",
+        name: "More"
     },
 ]
 
@@ -63,7 +63,7 @@ export const ServicesData = [
         id: "6",
         page: "Dashboard",
         icon: "movie-play-outline",
-        name: "Movie Ticket"
+        name: "Movie Tickets"
     },
     {
         id: "3",
@@ -74,20 +74,20 @@ export const ServicesData = [
     {
         id: "4",
         page: "Dashboard",
-        icon: "account-arrow-right-outline",
-        name: "Personal Loan"
+        icon: "train",
+        name: "Train Tickets"
     },
     {
         id: "7",
         page: "Dashboard",
-        icon: "home-export-outline",
-        name: "Home Loan"
+        icon: "home-city-outline",
+        name: "Hotal Booking"
     },
     {
         id: "8",
         page: "Dashboard",
-        icon: "share",
-        name: "Other"
+        icon: "widgets-outline",
+        name: "More"
     },
 ]
 
@@ -99,7 +99,7 @@ export const RecentlyCardData = [
         activity: 'Send Money',
         amount: '6,758',
         date: '25-May-2023',
-        icon:'currency-inr'
+        icon: 'currency-inr'
     },
     {
         id: "2",
@@ -107,7 +107,7 @@ export const RecentlyCardData = [
         activity: 'Recived Money',
         amount: '954',
         date: '06-Jun-2023',
-        icon:'currency-inr'
+        icon: 'currency-inr'
     },
     {
         id: "3",
@@ -115,7 +115,7 @@ export const RecentlyCardData = [
         activity: 'Send Money',
         amount: '125',
         date: '08-Dec-2023',
-        icon:'currency-inr'
+        icon: 'currency-inr'
     },
     {
         id: "4",
@@ -123,7 +123,7 @@ export const RecentlyCardData = [
         activity: 'Send Money',
         amount: '457',
         date: '05-Mar-2024',
-        icon:'currency-inr'
+        icon: 'currency-inr'
     },
 
 ]
@@ -172,20 +172,47 @@ export const PaymentUser = [
 export const ProfileData = [
     {
         id: "1",
-        page: "Recived",
-        icon: "account",
-        name: "Prashant",
+        name: "All Transactions",
+        icon: "gender-transgender",
     },
     {
         id: "2",
-        page: "Recived",
-        icon: "account",
-        name: "Mayank",
+        name: "All Orders",
+        icon: "order-bool-descending",
     },
     {
         id: "3",
-        page: "Recived",
-        icon: "account",
-        name: "Bhanu",
+        name: "Offers",
+        icon: "gift-outline",
+    },
+    {
+        id: "4",
+        name: "Settings",
+        icon: "cog-transfer",
+    },
+    {
+        id: "5",
+        name: "About",
+        icon: "message-question-outline",
+    },
+    {
+        id: "6",
+        name: "Privacy Policy",
+        icon: "security",
+    },
+    {
+        id: "7",
+        name: "Terms & Conditions",
+        icon: "cog-transfer",
+    },
+    {
+        id: "8",
+        name: "Share The App",
+        icon: "share-variant",
+    },
+    {
+        id: "9",
+        name: "Log Out",
+        icon: "logout-variant",
     },
 ]

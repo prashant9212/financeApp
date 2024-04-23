@@ -11,11 +11,11 @@ import Offers from './component/Offers';
 import BarCode from './component/BarCode';
 import LocationApp from './component/Location';
 import LocationNew from './component/LocationNew';
-import Cart from './component/Cart';
-import Cart1 from './component/CartScreen/Cart1';
-import Cart2 from './component/CartScreen/Cart1';
-import Cart3 from './component/CartScreen/Cart1';
 import Chart from './component/Chart';
+import Orders from './component/OtherScreen/Orders';
+import Transactions from './component/OtherScreen/Transactions';
+import Other from './component/Other';
+import Insurance from './component/Insurance';
 
 
 
@@ -83,24 +83,24 @@ const App = () => {
             options={{ title: "Chart" }}
           />
           <Stack.Screen
-            name="Cart"
-            component={Cart}
-            options={{ title: "Cart" }}
+            name="Other"
+            component={Other}
+            options={{ title: "Other" }}
           />
           <Stack.Screen
             name="Cart1"
-            component={Cart1}
-            options={{ title: "Cart1" }}
+            component={Orders}
+            options={{ title: "Orders" }}
           />
           <Stack.Screen
-            name="Cart2"
-            component={Cart2}
-            options={{ title: "Cart2" }}
+            name="Transactions"
+            component={Transactions}
+            options={{ title: "Transactions" }}
           />
           <Stack.Screen
-            name="Cart3"
-            component={Cart3}
-            options={{ title: "Cart3" }}
+            name="Insurance"
+            component={Insurance}
+            options={{ title: "Insurance" }}
           />
           
 

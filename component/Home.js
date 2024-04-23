@@ -5,7 +5,9 @@ import Dashboard from './Dashboard';
 import Profile from './Profile';
 import Offers from './Offers';
 import BarCode from './BarCode';
-import Cart from './Cart';
+import Other from './Other';
+import Insurance from './Insurance';
+
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -23,7 +25,7 @@ const Home = ({ navigation }) => {
                 options={{
                     tabBarLabel: 'Home',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="home" color={color} size={22} />
+                        <MaterialCommunityIcons name="home" color={color} size={18} />
                     ),
                 }}
             />
@@ -33,27 +35,27 @@ const Home = ({ navigation }) => {
                 options={{
                     tabBarLabel: 'Scan & Pay',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="barcode-scan" color={color} size={22} />
+                        <MaterialCommunityIcons name="barcode-scan" color={color} size={18} />
                     ),
                 }}
             />
             <Tab.Screen
-                name="Offers"
-                component={Offers}
+                name="Insurance"
+                component={Insurance}
                 options={{
-                    tabBarLabel: 'Offers',
+                    tabBarLabel: 'Insurance',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="wallet-giftcard" color={color} size={22} />
+                        <MaterialCommunityIcons name="shield-alert" color={color} size={18} />
                     ),
                 }}
             />    
             <Tab.Screen
-                name="Cart"
-                component={Cart}
+                name="Other"
+                component={Other}
                 options={{
-                    tabBarLabel: 'Cart',
+                    tabBarLabel: 'Transactions',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="cart" color={color} size={22} />
+                        <MaterialCommunityIcons name="gender-transgender" color={color} size={18} />
                     ),
                 }}
             />           
@@ -63,7 +65,7 @@ const Home = ({ navigation }) => {
                 options={{
                     tabBarLabel: 'Profile',
                     tabBarIcon: ({ color }) => (
-                        <MaterialCommunityIcons name="account" color={color} size={22} />
+                        <MaterialCommunityIcons name="account" color={color} size={18} />
                     ),
                 }}
             />
