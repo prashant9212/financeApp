@@ -5,7 +5,7 @@ import Dashboard from './Dashboard';
 import Profile from './Profile';
 import Offers from './Offers';
 import BarCode from './BarCode';
-
+import Cart from './Cart';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -44,6 +44,16 @@ const Home = ({ navigation }) => {
                     tabBarLabel: 'Offers',
                     tabBarIcon: ({ color }) => (
                         <MaterialCommunityIcons name="wallet-giftcard" color={color} size={22} />
+                    ),
+                }}
+            />    
+            <Tab.Screen
+                name="Cart"
+                component={Cart}
+                options={{
+                    tabBarLabel: 'Cart',
+                    tabBarIcon: ({ color }) => (
+                        <MaterialCommunityIcons name="cart" color={color} size={22} />
                     ),
                 }}
             />           

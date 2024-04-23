@@ -4,6 +4,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
+  containerProfile: {
+    flex: 1,
+    backgroundColor:'#fff'
+  },
   containerHome: {
     backgroundColor: "#f8ebff",
     height: "100%",
@@ -18,11 +22,11 @@ const styles = StyleSheet.create({
     color: "#fff",
   },
   PopupInner: {
-    margin: '15%',
+    margin: "15%",
     width: "70%",
     backgroundColor: "#fff",
-    padding:10,
-    borderRadius:10,
+    padding: 10,
+    borderRadius: 10,
     elevation: 5,
     shadowColor: "#000",
   },
@@ -33,8 +37,8 @@ const styles = StyleSheet.create({
     paddingTop: 40,
     borderBottomEndRadius: 20,
     borderBottomStartRadius: 20,
-    borderColor:'#eee', 
-    borderWidth:1,
+    borderColor: "#eee",
+    borderWidth: 1,
   },
   RecentlyCardBox: {
     elevation: 1,
@@ -157,16 +161,27 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     justifyContent: "flex-end",
   },
-  ScanAgainBtn:{
-    position:'absolute', 
-    bottom:'30%', 
-    right:0,
-    backgroundColor:'#fff',
-    textAlign:'center',
-    padding:10,
-    margin:10,
-    borderRadius:10,
-    fontSize:18
+  ScanAgainBtn: {
+    position: "absolute",
+    bottom: "30%",
+    right: 0,
+    backgroundColor: "#fff",
+    textAlign: "center",
+    padding: 10,
+    margin: 10,
+    borderRadius: 10,
+    fontSize: 18,
+  },
+  ProfileHeader: {
+    flexDirection: 'row',
+    backgroundColor: "#fff",
+    height: 50,
+    marginTop:32,
+    padding:12,
+  },
+  ProfileHeadText:{
+    fontSize:18,
+    alignSelf:'center'
   },
 });
 

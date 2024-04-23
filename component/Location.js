@@ -10,7 +10,7 @@ export default function LocationApp({ navigation }) {
   React.useEffect(() => {
     const timer = setTimeout(() => {
       navigation.navigate("Login");
-    }, 10000);
+    }, 5000);
     return () => {
       clearTimeout(timer);
     };

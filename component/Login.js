@@ -36,7 +36,7 @@ const Login = ({ navigation }) => {
           <Text style={styles.LoginCheckBoxText}>Remember me</Text>
         </View>
       </View>
-      {isChecked ? (
+      {/* {isChecked ? (
         <TouchableOpacity
           style={{ flexDirection: "row", alignSelf: "center" }}
           onPress={() => {
@@ -49,7 +49,15 @@ const Login = ({ navigation }) => {
         <TouchableOpacity style={{ flexDirection: "row", alignSelf: "center" }}>
           <Text style={styles.loginBtn}>Login</Text>
         </TouchableOpacity>
-      )}
+      )} */}
+      <TouchableOpacity
+        style={{ flexDirection: "row", alignSelf: "center" }}
+        onPress={() => {
+          navigation.navigate("Home");
+        }}
+      >
+        <Text style={styles.loginBtn}>Login</Text>
+      </TouchableOpacity>
       <View
         style={{ flexDirection: "row", alignSelf: "center", marginTop: 30 }}
       >

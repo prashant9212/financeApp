@@ -10,7 +10,12 @@ import Home from './component/Home';
 import Offers from './component/Offers';
 import BarCode from './component/BarCode';
 import LocationApp from './component/Location';
-
+import LocationNew from './component/LocationNew';
+import Cart from './component/Cart';
+import Cart1 from './component/CartScreen/Cart1';
+import Cart2 from './component/CartScreen/Cart1';
+import Cart3 from './component/CartScreen/Cart1';
+import Chart from './component/Chart';
 
 
 
@@ -23,7 +28,7 @@ const App = () => {
       <StatusBar style='light' />
       <NavigationContainer>
         <Stack.Navigator
-          initialRouteName="LocationApp"
+          initialRouteName="Home"
           screenOptions={{ headerShown: false }}
         >
           <Stack.Screen
@@ -66,6 +71,36 @@ const App = () => {
             name="BarCode"
             component={BarCode}
             options={{ title: "BarCode" }}
+          />
+          <Stack.Screen
+            name="LocationNew"
+            component={LocationNew}
+            options={{ title: "LocationNew" }}
+          />
+          <Stack.Screen
+            name="Chart"
+            component={Chart}
+            options={{ title: "Chart" }}
+          />
+          <Stack.Screen
+            name="Cart"
+            component={Cart}
+            options={{ title: "Cart" }}
+          />
+          <Stack.Screen
+            name="Cart1"
+            component={Cart1}
+            options={{ title: "Cart1" }}
+          />
+          <Stack.Screen
+            name="Cart2"
+            component={Cart2}
+            options={{ title: "Cart2" }}
+          />
+          <Stack.Screen
+            name="Cart3"
+            component={Cart3}
+            options={{ title: "Cart3" }}
           />
           
 

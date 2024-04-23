@@ -167,3 +167,25 @@ export const PaymentUser = [
         name: "Gaurav",
     },
 ]
+
+
+export const ProfileData = [
+    {
+        id: "1",
+        page: "Recived",
+        icon: "account",
+        name: "Prashant",
+    },
+    {
+        id: "2",
+        page: "Recived",
+        icon: "account",
+        name: "Mayank",
+    },
+    {
+        id: "3",
+        page: "Recived",
+        icon: "account",
+        name: "Bhanu",
+    },
+]

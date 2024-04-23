@@ -7,6 +7,7 @@ import { CardData, ServicesData, RecentlyCardData } from './DataApi/Data';
 import { StatusBar } from 'expo-status-bar';
 import SliderMain from './SliderMain';
 import SliderMain1 from './SliderMain1';
+import Chart from './Chart';
 
 
 const Dashboard = ({ navigation }) => {
@@ -106,7 +107,6 @@ const Dashboard = ({ navigation }) => {
                 </View>
 
                 <SliderMain1 />
-
                 {/* Other Services */}
 
                 <View style={styles.servicesCard}>
@@ -144,10 +144,11 @@ const Dashboard = ({ navigation }) => {
                         </Text>
                         <TouchableOpacity style={{ flexDirection: 'row-reverse', padding: 15, }}
                             onPress={() => {
-                                navigation.navigate("{page}");
+                                navigation.navigate('Cart', {screen:'Cart1'});
                             }}>
                             <Text style={{ color: '#691A99' }}>See All</Text>
                         </TouchableOpacity>
+
                     </View>
                     <View>
                         {RecentlyCardData.map((User, number) => {
